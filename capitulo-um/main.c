@@ -19,8 +19,7 @@ int main() {
         
         printf("Insira a alternativa B:\n");
         fgets(altB, TAM, stdin);
-
-        
+       
         printf("Insira a alternativa C: \n");
         fgets(altC, TAM, stdin);
 
@@ -30,7 +29,7 @@ int main() {
         printf("Agora, qual delas é a correta?\n");
         scanf(" %c", &respostaCorreta);
         
-        printf("\n==========================================================\n");
+        printf("==========================================================\n");
         
         printf("Pergunta %d: %s", rodada, enunciado);
         printf("A) %s", altA);
@@ -38,8 +37,18 @@ int main() {
         printf("C) %s", altC);
         printf("D) %s", altD);
 
+        printf("Insira a sua resposta: ");
+        scanf(" %c", &respostaUsuario);
+
+        if(respostaUsuario == respostaCorreta) {
+
+            pontuacao++;
 
         }
+
+        }
+
+        printf("Resultado final: %d/1", pontuacao);
     
     return 0;
 }
