@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #define TAM 100
 
 int main() {
@@ -16,20 +17,29 @@ int main() {
         printf("Insira a alternativa A:\n");
         fgets(altA, TAM, stdin);
         
-        printf("Insira uma alternativa B:\n");
+        printf("Insira a alternativa B:\n");
         fgets(altB, TAM, stdin);
 
         
-        printf("Insira uma alternativa C: \n");
+        printf("Insira a alternativa C: \n");
         fgets(altC, TAM, stdin);
 
-        printf("Insira uma alternativa D: \n");
+        printf("Insira a alternativa D: \n");
         fgets(altD, TAM, stdin);
 
         printf("Agora, qual delas é a correta?\n");
         scanf(" %c", &respostaCorreta);
         
-    }
+        printf("\n==========================================================\n");
+        
+        printf("Pergunta %d: %s", rodada, enunciado);
+        printf("A) %s", altA);
+        printf("B) %s", altB);
+        printf("C) %s", altC);
+        printf("D) %s", altD);
+
+
+        }
     
     return 0;
 }
