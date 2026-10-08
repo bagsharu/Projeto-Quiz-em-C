@@ -31,8 +31,8 @@ int main() {
         switch (menuNav)
         {
         case 1:
-            // Chama função Jogar()
-            // Executa o quiz com as perguntas cadastradas, valida respostas e calcula pontos
+
+            jogar(enunciados, alternativaA, alternativaB, alternativaC, alternativaD, gabaritos, totalPerguntas, &totalAcertos, &totalRespostas);
             break;
         
         case 2:
