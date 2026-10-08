@@ -6,7 +6,16 @@
 int main() {
 
 
-    exibirMenu();
+    int menuNav;
+
+    while (menuNav != 0){
+
+        exibirMenu();
+
+        scanf("%d", &menuNav);
+        printf("Opcao: %d\n", menuNav);
+
+    }
 
     // int pontuacao = 0, rodada = 0;
     // float percentual;

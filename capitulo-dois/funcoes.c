@@ -8,5 +8,6 @@ void exibirMenu(){
         "2. Cadastrar pergunta\n"
         "3. Listar perguntas\n"
         "4. Estatisticas\n"
-        "0. Sair\n");
+        "0. Sair\n"
+        "Digite uma opcao:\n");
 }
