@@ -15,10 +15,14 @@ int main() {
         scanf("%d", &menuNav);
         printf("Opcao: %d\n", menuNav);
 
+        if(menuNav > 5){
+            printf("Opcao invalida!\n");
+        }
+
     }
 
     // int pontuacao = 0, rodada = 0;
-    // float percentual;
+    // float percentual;1
     // char enunciado[TAM], altA[TAM], altB[TAM], altC[TAM], altD[TAM], respostaCorreta, respostaUsuario;
 
     // for(rodada = 1; rodada <= 5; rodada++){
