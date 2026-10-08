@@ -7,7 +7,7 @@
 int main() {
 
 
-    int menuNav = 127;
+    int menuNav = 127, totalPerguntas = 0;
     char enunciados[PERGUNTA][TAM];
     char alternativaA[PERGUNTA][TAM];
     char alternativaB[PERGUNTA][TAM];
@@ -20,6 +20,8 @@ int main() {
         exibirMenu();
 
         scanf("%d", &menuNav);
+        while (getchar() != '\n');
+
         printf("Opcao: %d\n", menuNav);
 
         if(menuNav > 4 || menuNav < 0){
@@ -36,6 +38,17 @@ int main() {
         case 2:
             // Chama função Cadastrar()
             // Recebe o enunciado, quatro alternativas e resposta correta, armazenando a pergunta
+
+            if(totalPerguntas < PERGUNTA){
+
+                cadastrarPergunta(enunciados,alternativaA,alternativaB,alternativaC,alternativaD, gabaritos, totalPerguntas);
+
+                totalPerguntas++;
+            } else{
+
+                printf("Limite de perguntas atingido!\n");
+            }
+
             break;
         case 3:
             // Chama função Listar()
