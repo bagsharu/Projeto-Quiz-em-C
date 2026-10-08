@@ -60,3 +60,51 @@ void exibirEstatisticas(int totalPerguntas, int totalAcertos, int totalRespostas
         printf("Media de acertos: 0.00%%\n");
     }
 }
+
+void jogar(char enunciados[][TAM], char alternativaA[][TAM], char alternativaB[][TAM], char alternativaC[][TAM], char alternativaD[][TAM], char gabaritos[], int totalPerguntas, int *totalAcertos, int *totalRespostas) {
+    char resposta;
+    int pontos = 0;
+
+    if (totalPerguntas == 0) {
+        printf("Nenhuma pergunta cadastrada!\n");
+        return;
+    }
+
+    printf("\n=== Iniciando Quiz ===\n");
+
+    for (int i = 0; i < totalPerguntas; i++) {
+        printf("\nPergunta %d:\n", i + 1);
+        printf("%s", enunciados[i]);
+
+        printf("A) %s", alternativaA[i]);
+        printf("B) %s", alternativaB[i]);
+        printf("C) %s", alternativaC[i]);
+        printf("D) %s", alternativaD[i]);
+
+        do {
+            printf("Sua resposta (A-D): ");
+            scanf(" %c", &resposta);
+            while (getchar() != '\n');
+
+            if (resposta < 'A' || resposta > 'D') {
+                printf("Resposta invalida!\n");
+            }
+
+        } while (resposta < 'A' || resposta > 'D');
+
+        (*totalRespostas)++;
+
+        if (resposta == gabaritos[i]) {
+            printf("Resposta correta!\n");
+            pontos++;
+            (*totalAcertos)++;
+        } else {
+            printf("Resposta incorreta! Correta: %c\n", gabaritos[i]);
+        }
+    }
+
+    printf("\n=== Resultado ===\n");
+    printf("Acertos: %d de %d\n", pontos, totalPerguntas);
+    printf("Porcentagem: %.2f%%\n",
+           (pontos * 100.0) / totalPerguntas);
+}
