@@ -8,7 +8,7 @@ int main() {
     float percentual;
     char enunciado[TAM], altA[TAM], altB[TAM], altC[TAM], altD[TAM], respostaCorreta, respostaUsuario;
 
-    for(rodada = 1; rodada <= 1; rodada++){
+    for(rodada = 1; rodada <= 5; rodada++){
 
         printf("Digite a pergunta numero %d:\n", rodada);
         fgets(enunciado, TAM, stdin);
@@ -28,6 +28,7 @@ int main() {
 
         printf("Agora, qual delas é a correta?\n");
         scanf(" %c", &respostaCorreta);
+        while (getchar() != '\n'); 
         
         printf("==========================================================\n");
         
@@ -39,6 +40,7 @@ int main() {
 
         printf("Insira a sua resposta: ");
         scanf(" %c", &respostaUsuario);
+        while (getchar() != '\n'); 
 
         if(respostaUsuario == respostaCorreta) {
 
@@ -48,7 +50,7 @@ int main() {
 
         }
 
-        printf("Resultado final: %d/1", pontuacao);
+        printf("Resultado final: %d/5", pontuacao);
     
     return 0;
 }
