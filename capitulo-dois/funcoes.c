@@ -33,3 +33,17 @@ void cadastrarPergunta(char enunciados[][TAM], char alternativaA[][TAM], char al
         scanf(" %c", &gabaritos[indice]);
         while (getchar() != '\n');
 }
+
+void listarPerguntas(char enunciados[][TAM], int totalPerguntas)
+{
+    if (totalPerguntas == 0) {
+        printf("Nenhuma pergunta cadastrada!\n");
+        return;
+    }
+
+    printf("\n=== Perguntas cadastradas ===\n");
+
+    for (int i = 0; i < totalPerguntas; i++) {
+        printf("%d. %s", i + 1, enunciados[i]);
+    }
+}
