@@ -47,3 +47,16 @@ void listarPerguntas(char enunciados[][TAM], int totalPerguntas)
         printf("%d. %s", i + 1, enunciados[i]);
     }
 }
+
+void exibirEstatisticas(int totalPerguntas, int totalAcertos, int totalRespostas)
+{
+    printf("\n=== Estatisticas ===\n");
+    printf("Perguntas cadastradas: %d\n", totalPerguntas);
+
+    if (totalRespostas > 0) {
+        printf("Media de acertos: %.2f%%\n",
+               (totalAcertos * 100.0) / totalRespostas);
+    } else {
+        printf("Media de acertos: 0.00%%\n");
+    }
+}
