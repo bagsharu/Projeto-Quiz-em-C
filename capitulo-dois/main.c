@@ -53,6 +53,7 @@ int main() {
         case 3:
             // Chama função Listar()
             // Exibe as perguntas cadastradas (enunciados)
+            listarPerguntas(enunciados, totalPerguntas);
             break;
         case 4:
             // Chama função Estatísticas()
