@@ -2,11 +2,18 @@
 #include <string.h>
 #include "funcoes.h"
 #define TAM 100
+#define PERGUNTA 5
 
 int main() {
 
 
     int menuNav = 127;
+    char enunciados[PERGUNTA][TAM];
+    char alternativaA[PERGUNTA][TAM];
+    char alternativaB[PERGUNTA][TAM];
+    char alternativaC[PERGUNTA][TAM];
+    char alternativaD[PERGUNTA][TAM];
+    char gabaritos[PERGUNTA];
 
     while (menuNav != 0){
 
