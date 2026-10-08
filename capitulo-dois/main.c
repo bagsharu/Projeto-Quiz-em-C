@@ -6,7 +6,7 @@
 int main() {
 
 
-    int menuNav;
+    int menuNav = 127;
 
     while (menuNav != 0){
 
@@ -15,7 +15,7 @@ int main() {
         scanf("%d", &menuNav);
         printf("Opcao: %d\n", menuNav);
 
-        if(menuNav > 5){
+        if(menuNav > 4 || menuNav < 0){
             printf("Opcao invalida!\n");
         }
 
