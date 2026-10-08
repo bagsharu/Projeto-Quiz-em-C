@@ -50,7 +50,8 @@ int main() {
 
         }
 
-        printf("Resultado final: %d/5", pontuacao);
+        percentual = (pontuacao / 5.0) * 100;
     
+        printf("Resultado final: %d/5 acertos (%.2f%%)\n", pontuacao, percentual);
     return 0;
 }
