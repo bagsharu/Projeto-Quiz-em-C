@@ -12,7 +12,7 @@ void exibirMenu(){
         "Digite uma opcao:\n");
 }
 
-void cadastrarPergunta(char enunciados[][TAM], char alternativaA[][TAM], char alternativaB[][TAM], char alternativaC[][TAM], char alternativaD[][TAM], char gabaritos[], int indice)
+int cadastrarPergunta(char enunciados[][TAM], char alternativaA[][TAM], char alternativaB[][TAM], char alternativaC[][TAM], char alternativaD[][TAM], char gabaritos[], int indice)
     {
     printf("Digite a pergunta numero %d:\n", indice+1);
         fgets(enunciados[indice], TAM, stdin);
@@ -32,6 +32,8 @@ void cadastrarPergunta(char enunciados[][TAM], char alternativaA[][TAM], char al
         printf("Agora, qual delas é a correta?\n");
         scanf(" %c", &gabaritos[indice]);
         while (getchar() != '\n');
+
+        return 1;
 }
 
 void listarPerguntas(char enunciados[][TAM], int totalPerguntas)

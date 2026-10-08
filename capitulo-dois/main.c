@@ -36,14 +36,12 @@ int main() {
             break;
         
         case 2:
-
-            if(totalPerguntas < PERGUNTA){
-
-                cadastrarPergunta(enunciados,alternativaA,alternativaB,alternativaC,alternativaD, gabaritos, totalPerguntas);
-
-                totalPerguntas++;
-            } else{
-
+            if (totalPerguntas < PERGUNTA) {
+                if (cadastrarPergunta(enunciados, alternativaA, alternativaB, alternativaC, alternativaD, gabaritos, totalPerguntas) == 1) {
+                    totalPerguntas++;
+                    printf("Pergunta cadastrada com sucesso!\n");
+                }
+            } else {
                 printf("Limite de perguntas atingido!\n");
             }
             break;
