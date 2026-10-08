@@ -19,6 +19,29 @@ int main() {
             printf("Opcao invalida!\n");
         }
 
+        switch (menuNav)
+        {
+        case 1:
+            // Chama função Jogar()
+            // Executa o quiz com as perguntas cadastradas, valida respostas e calcula pontos
+            break;
+        
+        case 2:
+            // Chama função Cadastrar()
+            // Recebe o enunciado, quatro alternativas e resposta correta, armazenando a pergunta
+            break;
+        case 3:
+            // Chama função Listar()
+            // Exibe as perguntas cadastradas (enunciados)
+            break;
+        case 4:
+            // Chama função Estatísticas()
+            // Imprime o total de perguntas e a média de acertos
+        default:
+            printf("Opcao invalida!\n");
+            break;
+        }
+
     }
 
     // int pontuacao = 0, rodada = 0;
