@@ -35,12 +35,12 @@ int main() {
         {
         case 1:
 
-            jogar(enunciados, alternativaA, alternativaB, alternativaC, alternativaD, gabaritos, totalPerguntas, &totalAcertos, &totalRespostas);
+            jogar(perguntas, totalPerguntas, &totalAcertos, &totalRespostas);
             break;
         
         case 2:
             if (totalPerguntas < PERGUNTA) {
-                if (cadastrarPergunta(enunciados, alternativaA, alternativaB, alternativaC, alternativaD, gabaritos, totalPerguntas) == 1) {
+                if (cadastrarPergunta(perguntas, totalPerguntas) == 1) {
                     totalPerguntas++;
                     printf("Pergunta cadastrada com sucesso!\n");
                 }
