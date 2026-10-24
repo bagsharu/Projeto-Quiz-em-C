@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "../include/funcoes.h"
+#include "../include/modulo.h"
 #define TAM 100
 #define PERGUNTA 5
 
@@ -14,6 +15,8 @@ int main() {
     char alternativaC[PERGUNTA][TAM];
     char alternativaD[PERGUNTA][TAM];
     char gabaritos[PERGUNTA];
+
+    Pergunta perguntas[PERGUNTA];
 
     while (menuNav != 0){
 

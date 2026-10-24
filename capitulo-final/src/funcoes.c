@@ -1,4 +1,5 @@
 #include "../include/funcoes.h"
+#include "../include/modulo.h"
 #include <stdio.h>
 
 void exibirMenu(){
@@ -12,25 +13,25 @@ void exibirMenu(){
         "Digite uma opcao:\n");
 }
 
-int cadastrarPergunta(char enunciados[][TAM], char alternativaA[][TAM], char alternativaB[][TAM], char alternativaC[][TAM], char alternativaD[][TAM], char gabaritos[], int indice)
+int cadastrarPergunta(Pergunta perguntas[PERGUNTA], int indice)
     {
     printf("Digite a pergunta numero %d:\n", indice+1);
-        fgets(enunciados[indice], TAM, stdin);
+        fgets(perguntas[indice].enunciado, TAM, stdin);
 
         printf("Insira a alternativa A:\n");
-        fgets(alternativaA[indice], TAM, stdin);
+        fgets(perguntas[indice].alternativas[0], TAM, stdin);
 
         printf("Insira a alternativa B:\n");
-        fgets(alternativaB[indice], TAM, stdin);
+        fgets(perguntas[indice].alternativas[1], TAM, stdin);
 
         printf("Insira a alternativa C:\n");
-        fgets(alternativaC[indice], TAM, stdin);
+        fgets(perguntas[indice].alternativas[2], TAM, stdin);
 
         printf("Insira a alternativa D:\n");
-        fgets(alternativaD[indice], TAM, stdin);
+        fgets(perguntas[indice].alternativas[3], TAM, stdin);
 
         printf("Agora, qual delas é a correta?\n");
-        scanf(" %c", &gabaritos[indice]);
+        scanf(" %c", &perguntas[indice].respostaCorreta);
         while (getchar() != '\n');
 
         return 1;
