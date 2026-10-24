@@ -1,4 +1,4 @@
-#include "funcoes.h"
+#include "../include/funcoes.h"
 #include <stdio.h>
 
 void exibirMenu(){

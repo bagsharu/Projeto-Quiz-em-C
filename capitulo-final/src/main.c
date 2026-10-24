@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "funcoes.h"
+#include "../include/funcoes.h"
 #define TAM 100
 #define PERGUNTA 5
 
