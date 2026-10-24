@@ -13,7 +13,10 @@ void exibirMenu(){
         "Digite uma opcao:\n");
 }
 
-int cadastrarPergunta(Pergunta perguntas[PERGUNTA], int indice)
+// Recebe a referência do array de structs e o índice de registro da pergunta,
+// o que garante que será cadastrada devidamente na ordem de 1 a 5.
+
+void cadastrarPergunta(Pergunta perguntas[PERGUNTA], int indice)
     {
     printf("Digite a pergunta numero %d:\n", indice+1);
         fgets(perguntas[indice].enunciado, TAM, stdin);
@@ -34,7 +37,6 @@ int cadastrarPergunta(Pergunta perguntas[PERGUNTA], int indice)
         scanf(" %c", &perguntas[indice].respostaCorreta);
         while (getchar() != '\n');
 
-        return 1;
 }
 
 void listarPerguntas(char enunciados[][TAM], int totalPerguntas)
