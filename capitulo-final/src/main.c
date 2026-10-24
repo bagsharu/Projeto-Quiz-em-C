@@ -9,12 +9,6 @@ int main() {
 
 
     int menuNav = 127, totalPerguntas = 0, totalAcertos = 0, totalRespostas = 0;
-    char enunciados[PERGUNTA][TAM];
-    char alternativaA[PERGUNTA][TAM];
-    char alternativaB[PERGUNTA][TAM];
-    char alternativaC[PERGUNTA][TAM];
-    char alternativaD[PERGUNTA][TAM];
-    char gabaritos[PERGUNTA];
 
     Pergunta perguntas[PERGUNTA];
 
@@ -26,10 +20,6 @@ int main() {
         while (getchar() != '\n');
 
         printf("Opcao: %d\n", menuNav);
-
-        if(menuNav > 4 || menuNav < 0){
-            printf("Opcao invalida!\n");
-        }
 
         switch (menuNav)
         {
@@ -54,9 +44,13 @@ int main() {
         case 4:
             exibirEstatisticas(totalPerguntas, totalAcertos, totalRespostas);
             break;
+        case 0:
+            printf("Saindo...\n");
+            break;
         default:
             printf("Opcao invalida!\n");
             break;
+
         }
 
     }
