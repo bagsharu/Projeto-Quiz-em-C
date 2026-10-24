@@ -40,7 +40,7 @@ int cadastrarPergunta(Pergunta perguntas[PERGUNTA], int indice)
         return 1;
 }
 
-void listarPerguntas(char enunciados[][TAM], int totalPerguntas)
+void listarPerguntas(Pergunta perguntas[PERGUNTA], int totalPerguntas)
 {
     if (totalPerguntas == 0) {
         printf("Nenhuma pergunta cadastrada!\n");
@@ -50,7 +50,7 @@ void listarPerguntas(char enunciados[][TAM], int totalPerguntas)
     printf("\n=== Perguntas cadastradas ===\n");
 
     for (int i = 0; i < totalPerguntas; i++) {
-        printf("%d. %s", i + 1, enunciados[i]);
+        printf("%d. %s", i + 1, perguntas[i].enunciado);
     }
 }
 

@@ -8,7 +8,7 @@
 
 void exibirMenu();
 int cadastrarPergunta(Pergunta perguntas[PERGUNTA], int indice);
-void listarPerguntas(char enunciados[][TAM], int totalPerguntas);
+void listarPerguntas(Pergunta perguntas[PERGUNTA], int totalPerguntas);
 void exibirEstatisticas(int totalPerguntas, int totalAcertos, int totalRespostas);
 void jogar(Pergunta perguntas[PERGUNTA], int totalPerguntas, int *totalAcertos, int *totalRespostas);
 

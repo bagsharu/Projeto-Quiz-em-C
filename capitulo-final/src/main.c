@@ -49,7 +49,7 @@ int main() {
             }
             break;
         case 3:
-            listarPerguntas(enunciados, totalPerguntas);
+            listarPerguntas(perguntas, totalPerguntas);
             break;
         case 4:
             exibirEstatisticas(totalPerguntas, totalAcertos, totalRespostas);
