@@ -16,7 +16,7 @@ void exibirMenu(){
 // Recebe a referência do array de structs e o índice de registro da pergunta,
 // o que garante que será cadastrada devidamente na ordem de 1 a 5.
 
-void cadastrarPergunta(Pergunta perguntas[PERGUNTA], int indice)
+int cadastrarPergunta(Pergunta perguntas[PERGUNTA], int indice)
     {
     printf("Digite a pergunta numero %d:\n", indice+1);
         fgets(perguntas[indice].enunciado, TAM, stdin);
@@ -37,6 +37,7 @@ void cadastrarPergunta(Pergunta perguntas[PERGUNTA], int indice)
         scanf(" %c", &perguntas[indice].respostaCorreta);
         while (getchar() != '\n');
 
+        return 1;
 }
 
 void listarPerguntas(char enunciados[][TAM], int totalPerguntas)
@@ -66,7 +67,7 @@ void exibirEstatisticas(int totalPerguntas, int totalAcertos, int totalRespostas
     }
 }
 
-void jogar(char enunciados[][TAM], char alternativaA[][TAM], char alternativaB[][TAM], char alternativaC[][TAM], char alternativaD[][TAM], char gabaritos[], int totalPerguntas, int *totalAcertos, int *totalRespostas) {
+void jogar(Pergunta perguntas[PERGUNTA], int totalPerguntas, int *totalAcertos, int *totalRespostas) {
     char resposta;
     int pontos = 0;
 
@@ -79,15 +80,15 @@ void jogar(char enunciados[][TAM], char alternativaA[][TAM], char alternativaB[]
 
     for (int i = 0; i < totalPerguntas; i++) {
         printf("\nPergunta %d:\n", i + 1);
-        printf("%s", enunciados[i]);
+        printf("%s", perguntas[i].enunciado);
 
-        printf("A) %s", alternativaA[i]);
-        printf("B) %s", alternativaB[i]);
-        printf("C) %s", alternativaC[i]);
-        printf("D) %s", alternativaD[i]);
+        printf("A) %s", perguntas[i].alternativas[0]);
+        printf("B) %s", perguntas[i].alternativas[1]);
+        printf("C) %s", perguntas[i].alternativas[2]);
+        printf("D) %s", perguntas[i].alternativas[3]);
 
         do {
-            printf("Sua resposta (A-D): ");
+            printf("Sua resposta (A - D): ");
             scanf(" %c", &resposta);
             while (getchar() != '\n');
 
@@ -99,12 +100,12 @@ void jogar(char enunciados[][TAM], char alternativaA[][TAM], char alternativaB[]
 
         (*totalRespostas)++;
 
-        if (resposta == gabaritos[i]) {
+        if (resposta == perguntas[i].respostaCorreta) {
             printf("Resposta correta!\n");
             pontos++;
             (*totalAcertos)++;
         } else {
-            printf("Resposta incorreta! Correta: %c\n", gabaritos[i]);
+            printf("Resposta incorreta!\n");
         }
     }
 
