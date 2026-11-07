@@ -18,4 +18,7 @@ typedef struct {
     float percentual;
 } Jogador;
 
+
+void salvarPerguntas (Pergunta perguntas[], int totalPerguntas);
+
 #endif
