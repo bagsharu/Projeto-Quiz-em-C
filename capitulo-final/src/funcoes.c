@@ -121,7 +121,10 @@ void jogar(Pergunta perguntas[PERGUNTA], Jogador jogadores[TAM], int totalPergun
     }
 
     printf("\n=== Resultado ===\n");
-    printf("Acertos: %d de %d\n", pontos, totalPerguntas);
-    printf("Porcentagem: %.2f%%\n",
-           (pontos * 100.0) / totalPerguntas);
+    printf("Jogador(a): %s\n", jogadores[*totalJogadores].nome);
+    jogadores[*totalJogadores].acertos = pontos;
+    jogadores[*totalJogadores].percentual = (pontos * 100.0) / (totalPerguntas);
+    printf("Acertos: %d de %d\n", jogadores[*totalJogadores].acertos, totalPerguntas);
+    printf("Percentual: %.2f%%\n", jogadores[*totalJogadores].percentual);
+
 }
