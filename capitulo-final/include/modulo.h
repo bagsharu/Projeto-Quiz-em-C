@@ -14,11 +14,12 @@ typedef struct {
 typedef struct {
     char nome[TAM];
     int acertos;
-    int totalPerguntas;
+    int totalPartidas;
     float percentual;
 } Jogador;
 
 
-void salvarPerguntas (Pergunta perguntas[], int totalPerguntas);
+void salvarPerguntas (Pergunta perguntas[PERGUNTA], int totalPerguntas);
+void carregarPerguntas (Pergunta perguntas[PERGUNTA]);
 
 #endif
