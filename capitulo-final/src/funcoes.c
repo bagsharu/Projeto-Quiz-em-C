@@ -14,9 +14,6 @@ void exibirMenu(){
         "Digite uma opcao:\n");
 }
 
-// Recebe a referência do array de structs e o índice de registro da pergunta,
-// o que garante que será cadastrada devidamente na ordem de 1 a 5.
-
 int cadastrarPergunta(Pergunta perguntas[PERGUNTA], int indice) {
     printf("Digite a pergunta numero %d:\n", indice + 1);
     fgets(perguntas[indice].enunciado, TAM, stdin);
@@ -59,16 +56,33 @@ void listarPerguntas(Pergunta perguntas[PERGUNTA], int totalPerguntas)
     }
 }
 
-void exibirEstatisticas(int totalPerguntas, int totalAcertos, int totalRespostas)
-{
-    printf("\n=== Estatisticas ===\n");
-    printf("Perguntas cadastradas: %d\n", totalPerguntas);
+void exibirEstatisticas(Jogador jogadores[TAM], int totalJogadores){
+    
+    Jogador ranking[TAM];
 
-    if (totalRespostas > 0) {
-        printf("Media de acertos: %.2f%%\n",
-               (totalAcertos * 100.0) / totalRespostas);
-    } else {
-        printf("Media de acertos: 0.00%%\n");
+    if(totalJogadores == 0){
+
+        printf("Nenhum registro de jogadores encontrado.\n");
+        return;
+    }
+
+    for (int i = 0; i < totalJogadores - 1; i++){
+
+        ranking[i] = jogadores[i];
+    }
+
+    bubbleSort(ranking, totalJogadores);
+
+    printf("\n=== Ranking ===\n");
+
+        for (int i = 0; i < totalJogadores; i++) {
+        printf("%d. %s - %.2f%% (%d/%d)\n",
+            i + 1,
+            ranking[i].nome,
+            ranking[i].percentual,
+            ranking[i].acertos,
+            ranking[i].totalPerguntas
+        );
     }
 }
 

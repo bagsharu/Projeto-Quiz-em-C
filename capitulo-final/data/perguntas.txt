@@ -1,3 +1,5 @@
 Qual o maior oceano do planeta Terra?;Atlantico;Indico;Pacifico;Artico;C
 Qual planeta conhecido como o planeta vermelho?;Venus;Jupiter;Marte;Mercurio;C
 Quem escreveu Dom Casmurro?;Machado de Assis;Jose Alencar;Clarice Lispector;Carlos Drummond;A
+Qual o simbolo na tabela periodica da Prata?;Au;Fe;Cu;Ag;D
+Qual capital do Mato Grosso do Sul?;Dourados;Corumba;Campo Grande;Bonito;C

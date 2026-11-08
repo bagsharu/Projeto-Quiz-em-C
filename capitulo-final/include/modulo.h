@@ -3,7 +3,6 @@
 
 #define TAM 100
 #define PERGUNTA 5
-#define JOGADORES 100
 
 typedef struct {
     char enunciado[TAM];

@@ -48,7 +48,8 @@ int main() {
             listarPerguntas(perguntas, totalPerguntas);
             break;
         case 4:
-            exibirEstatisticas(totalPerguntas, totalAcertos, totalRespostas);
+            printf("Total de jogadores: %d\n", totalJogadores);
+            exibirEstatisticas(jogadores, totalJogadores);
             break;
         case 0:
             printf("Saindo...\n");
