@@ -36,7 +36,7 @@ int carregarPerguntas(Pergunta perguntas[]){
     FILE * arquivo = fopen("data/perguntas.txt", "r");
     int totalCadastrado = 0;
     if (arquivo == NULL) {
-        printf("Arquivo de perguntas inválido.\n");
+        printf("Arquivo de perguntas invalido.\n");
         return 0;
     }
 
@@ -48,8 +48,7 @@ int carregarPerguntas(Pergunta perguntas[]){
             perguntas[totalCadastrado].alternativas[1],
             perguntas[totalCadastrado].alternativas[2],
             perguntas[totalCadastrado].alternativas[3],
-            &perguntas[totalCadastrado].respostaCorreta
-        );
+            &perguntas[totalCadastrado].respostaCorreta);
 
         if (leitura != 6) {
             break;
@@ -89,4 +88,37 @@ void salvarHistorico (Jogador jogadores[], int totalJogadores) {
     );
 
     fclose(arquivo);
+}
+
+int carregarHistorico(Jogador jogadores[]){
+
+    FILE * arquivo = fopen("data/historico.txt", "r");
+    int totalJogadoresCadastrado = 0;
+
+    if (arquivo == NULL) {
+        printf("Nenhum historico encontrado.\n");
+        return 0;
+    }
+
+    while(totalJogadoresCadastrado < TAM) {
+
+        int leitura = fscanf(arquivo, 
+                                    " %99[^;];%d;%d;f",
+                                    jogadores[totalJogadoresCadastrado].nome,
+                                    &jogadores[totalJogadoresCadastrado].acertos,
+                                    &jogadores[totalJogadoresCadastrado].totalPerguntas,
+                                    &jogadores[totalJogadoresCadastrado].percentual);
+        
+        if (leitura != 4) {
+
+            break;
+        }
+
+        totalJogadoresCadastrado++;
+    }
+
+    fclose(arquivo);
+
+    return totalJogadoresCadastrado;
+
 }

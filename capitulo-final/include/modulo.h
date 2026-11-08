@@ -23,5 +23,6 @@ void salvarPerguntas (Pergunta perguntas[PERGUNTA], int totalPerguntas);
 int carregarPerguntas (Pergunta perguntas[PERGUNTA]);
 
 void salvarHistorico (Jogador jogadores[TAM], int totalJogadores);
+int carregarHistorico (Jogador jogadores[TAM]);
 
 #endif

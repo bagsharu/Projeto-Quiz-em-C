@@ -14,6 +14,7 @@ int main() {
     Jogador jogadores[TAM];
  
     totalPerguntas = carregarPerguntas(perguntas);
+    totalJogadores = carregarHistorico(jogadores);
 
     while (menuNav != 0){
 
