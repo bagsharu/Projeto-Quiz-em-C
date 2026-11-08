@@ -14,7 +14,7 @@ typedef struct {
 typedef struct {
     char nome[TAM];
     int acertos;
-    int totalPartidas;
+    int totalPerguntas;
     float percentual;
 } Jogador;
 
