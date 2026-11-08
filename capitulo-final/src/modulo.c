@@ -103,12 +103,12 @@ int carregarHistorico(Jogador jogadores[]){
     while(totalJogadoresCadastrado < TAM) {
 
         int leitura = fscanf(arquivo, 
-                                    " %99[^;];%d;%d;f",
+                                    " %99[^;];%d;%d;%f",
                                     jogadores[totalJogadoresCadastrado].nome,
                                     &jogadores[totalJogadoresCadastrado].acertos,
                                     &jogadores[totalJogadoresCadastrado].totalPerguntas,
                                     &jogadores[totalJogadoresCadastrado].percentual);
-        
+        printf("Resultado da leitura: %d\n", leitura);
         if (leitura != 4) {
 
             break;

@@ -66,7 +66,7 @@ void exibirEstatisticas(Jogador jogadores[TAM], int totalJogadores){
         return;
     }
 
-    for (int i = 0; i < totalJogadores - 1; i++){
+    for (int i = 0; i < totalJogadores; i++){
 
         ranking[i] = jogadores[i];
     }
