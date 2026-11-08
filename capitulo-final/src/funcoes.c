@@ -56,7 +56,7 @@ void listarPerguntas(Pergunta perguntas[PERGUNTA], int totalPerguntas)
     printf("\n=== Perguntas cadastradas ===\n");
 
     for (int i = 0; i < totalPerguntas; i++) {
-        printf("%d. %s", i + 1, perguntas[i].enunciado);
+        printf("%d. %s\n", i + 1, perguntas[i].enunciado);
     }
 }
 
@@ -86,15 +86,15 @@ void jogar(Pergunta perguntas[PERGUNTA], int totalPerguntas, int *totalAcertos, 
 
     for (int i = 0; i < totalPerguntas; i++) {
         printf("\nPergunta %d:\n", i + 1);
-        printf("%s", perguntas[i].enunciado);
+        printf("%s\n", perguntas[i].enunciado);
 
-        printf("A) %s", perguntas[i].alternativas[0]);
-        printf("B) %s", perguntas[i].alternativas[1]);
-        printf("C) %s", perguntas[i].alternativas[2]);
-        printf("D) %s", perguntas[i].alternativas[3]);
+        printf("A) %s\n", perguntas[i].alternativas[0]);
+        printf("B) %s\n", perguntas[i].alternativas[1]);
+        printf("C) %s\n", perguntas[i].alternativas[2]);
+        printf("D) %s\n", perguntas[i].alternativas[3]);
 
         do {
-            printf("Sua resposta (A - D): ");
+            printf("Sua resposta (A - D): \n");
             scanf(" %c", &resposta);
             while (getchar() != '\n');
 
