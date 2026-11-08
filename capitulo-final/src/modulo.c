@@ -83,7 +83,7 @@ void salvarHistorico (Jogador jogadores[], int totalJogadores) {
     int i = totalJogadores - 1;
     fprintf(arquivo, "%s;%d;%d;%.2f\n", jogadores[i].nome,
                                           jogadores[i].acertos,
-                                          jogadores[i].totalPartidas,
+                                          jogadores[i].totalPerguntas,
                                           jogadores[i].percentual
         
     );
