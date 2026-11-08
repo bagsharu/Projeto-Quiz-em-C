@@ -22,4 +22,6 @@ typedef struct {
 void salvarPerguntas (Pergunta perguntas[PERGUNTA], int totalPerguntas);
 int carregarPerguntas (Pergunta perguntas[PERGUNTA]);
 
+void salvarHistorico (Jogador jogadores[TAM], int totalJogadores);
+
 #endif
