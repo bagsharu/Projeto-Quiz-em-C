@@ -1,6 +1,7 @@
 #include "../include/funcoes.h"
 #include "../include/modulo.h"
 #include <stdio.h>
+#include <string.h>
 
 void exibirMenu(){
 
@@ -18,28 +19,31 @@ void exibirMenu(){
 // o que garante que será cadastrada devidamente na ordem de 1 a 5.
 
 int cadastrarPergunta(Pergunta perguntas[PERGUNTA], int indice) {
-    printf("Digite a pergunta numero %d:\n", indice+1);
-        fgets(perguntas[indice].enunciado, TAM, stdin);
+    printf("Digite a pergunta numero %d:\n", indice + 1);
+    fgets(perguntas[indice].enunciado, TAM, stdin);
+    perguntas[indice].enunciado[strcspn(perguntas[indice].enunciado, "\n")] = '\0';
 
-        printf("Insira a alternativa A:\n");
-        fgets(perguntas[indice].alternativas[0], TAM, stdin);
+    printf("Insira a alternativa A:\n");
+    fgets(perguntas[indice].alternativas[0], TAM, stdin);
+    perguntas[indice].alternativas[0][strcspn(perguntas[indice].alternativas[0], "\n")] = '\0';
 
-        printf("Insira a alternativa B:\n");
-        fgets(perguntas[indice].alternativas[1], TAM, stdin);
+    printf("Insira a alternativa B:\n");
+    fgets(perguntas[indice].alternativas[1], TAM, stdin);
+    perguntas[indice].alternativas[1][strcspn(perguntas[indice].alternativas[1], "\n")] = '\0';
 
-        printf("Insira a alternativa C:\n");
-        fgets(perguntas[indice].alternativas[2], TAM, stdin);
+    printf("Insira a alternativa C:\n");
+    fgets(perguntas[indice].alternativas[2], TAM, stdin);
+    perguntas[indice].alternativas[2][strcspn(perguntas[indice].alternativas[2], "\n")] = '\0';
 
-        printf("Insira a alternativa D:\n");
-        fgets(perguntas[indice].alternativas[3], TAM, stdin);
+    printf("Insira a alternativa D:\n");
+    fgets(perguntas[indice].alternativas[3], TAM, stdin);
+    perguntas[indice].alternativas[3][strcspn(perguntas[indice].alternativas[3], "\n")] = '\0';
 
-        printf("Agora, qual delas é a correta?\n");
-        scanf(" %c", &perguntas[indice].respostaCorreta);
-        while (getchar() != '\n');
+    printf("Agora, qual delas e a correta?\n");
+    scanf(" %c", &perguntas[indice].respostaCorreta);
+    while (getchar() != '\n');
 
-
-
-        return 1;
+    return 1;
 }
 
 void listarPerguntas(Pergunta perguntas[PERGUNTA], int totalPerguntas)

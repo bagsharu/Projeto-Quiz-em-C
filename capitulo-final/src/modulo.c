@@ -1,6 +1,7 @@
 #include "../include/funcoes.h"
 #include "../include/modulo.h"
 #include <stdio.h>
+#include <string.h>
 
 void salvarPerguntas (Pergunta perguntas[], int totalPerguntas) {
 
