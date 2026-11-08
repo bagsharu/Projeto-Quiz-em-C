@@ -6,7 +6,7 @@
 #define PERGUNTA 5
 #define TAM 100
 
-void salvarPerguntas (Pergunta perguntas[], int totalPerguntas) {
+void salvarPerguntas (Pergunta perguntas[PERGUNTA], int totalPerguntas) {
 
     FILE *arquivo = fopen("data/perguntas.txt", "w");
 
@@ -31,7 +31,7 @@ void salvarPerguntas (Pergunta perguntas[], int totalPerguntas) {
     fclose(arquivo);
 }
 
-int carregarPerguntas(Pergunta perguntas[]){
+int carregarPerguntas(Pergunta perguntas[PERGUNTA]){
 
     FILE * arquivo = fopen("data/perguntas.txt", "r");
     int totalCadastrado = 0;
@@ -63,7 +63,7 @@ int carregarPerguntas(Pergunta perguntas[]){
 
 }
 
-void salvarHistorico (Jogador jogadores[], int totalJogadores) {
+void salvarHistorico (Jogador jogadores[TAM], int totalJogadores) {
 
     if (totalJogadores <= 0) {
 
@@ -90,7 +90,7 @@ void salvarHistorico (Jogador jogadores[], int totalJogadores) {
     fclose(arquivo);
 }
 
-int carregarHistorico(Jogador jogadores[]){
+int carregarHistorico(Jogador jogadores[TAM]){
 
     FILE * arquivo = fopen("data/historico.txt", "r");
     int totalJogadoresCadastrado = 0;
@@ -123,7 +123,7 @@ int carregarHistorico(Jogador jogadores[]){
 
 }
 
-void bubbleSort(Jogador jogadores[], int totalJogadores) {
+void bubbleSort(Jogador jogadores[TAM], int totalJogadores) {
     Jogador auxiliar;
 
     for (int i = 0; i < totalJogadores - 1; i++) {
