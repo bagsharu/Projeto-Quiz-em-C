@@ -108,7 +108,6 @@ int carregarHistorico(Jogador jogadores[TAM]){
                                     &jogadores[totalJogadoresCadastrado].acertos,
                                     &jogadores[totalJogadoresCadastrado].totalPerguntas,
                                     &jogadores[totalJogadoresCadastrado].percentual);
-        printf("Resultado da leitura: %d\n", leitura);
         if (leitura != 4) {
 
             break;
