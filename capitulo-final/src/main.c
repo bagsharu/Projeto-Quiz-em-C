@@ -46,7 +46,7 @@ int main() {
             break;
 
         case 5:
-            void salvarPerguntas (Pergunta perguntas[], int totalPerguntas);
+            salvarPerguntas (perguntas,totalPerguntas);
             break;
         case 0:
             printf("Saindo...\n");
