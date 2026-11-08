@@ -44,6 +44,10 @@ int main() {
         case 4:
             exibirEstatisticas(totalPerguntas, totalAcertos, totalRespostas);
             break;
+
+        case 5:
+            void salvarPerguntas (Pergunta perguntas[], int totalPerguntas);
+            break;
         case 0:
             printf("Saindo...\n");
             break;
