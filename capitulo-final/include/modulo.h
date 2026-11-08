@@ -25,4 +25,6 @@ int carregarPerguntas (Pergunta perguntas[PERGUNTA]);
 void salvarHistorico (Jogador jogadores[TAM], int totalJogadores);
 int carregarHistorico (Jogador jogadores[TAM]);
 
+void bubbleSort (Jogador jogadores[TAM], int totalJogadores);
+
 #endif

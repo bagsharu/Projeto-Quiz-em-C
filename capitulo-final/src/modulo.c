@@ -122,3 +122,17 @@ int carregarHistorico(Jogador jogadores[]){
     return totalJogadoresCadastrado;
 
 }
+
+void bubbleSort(Jogador jogadores[], int totalJogadores) {
+    Jogador auxiliar;
+
+    for (int i = 0; i < totalJogadores - 1; i++) {
+        for (int j = 0; j < totalJogadores - i - 1; j++) {
+            if (jogadores[j].percentual < jogadores[j + 1].percentual) {
+                auxiliar = jogadores[j];
+                jogadores[j] = jogadores[j + 1];
+                jogadores[j + 1] = auxiliar;
+            }
+        }
+    }
+}
