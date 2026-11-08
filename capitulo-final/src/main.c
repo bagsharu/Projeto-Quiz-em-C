@@ -8,10 +8,11 @@
 int main() {
 
 
-    int menuNav = 127, totalPerguntas = 0, totalAcertos = 0, totalRespostas = 0;
+    int menuNav = 127, totalPerguntas = 0, totalAcertos = 0, totalRespostas = 0,totalJogadores = 0;
 
     Pergunta perguntas[PERGUNTA];
-
+    Jogador jogadores[TAM];
+ 
     totalPerguntas = carregarPerguntas(perguntas);
 
     while (menuNav != 0){
@@ -27,7 +28,7 @@ int main() {
         {
         case 1:
 
-            jogar(perguntas, totalPerguntas, &totalAcertos, &totalRespostas);
+            jogar(perguntas, jogadores, totalPerguntas, &totalAcertos, &totalRespostas, &totalJogadores);
             break;
         
         case 2:

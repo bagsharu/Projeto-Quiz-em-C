@@ -73,9 +73,14 @@ void exibirEstatisticas(int totalPerguntas, int totalAcertos, int totalRespostas
     }
 }
 
-void jogar(Pergunta perguntas[PERGUNTA], int totalPerguntas, int *totalAcertos, int *totalRespostas) {
+void jogar(Pergunta perguntas[PERGUNTA], Jogador jogadores[TAM], int totalPerguntas, int *totalAcertos, int *totalRespostas, int *totalJogadores) {
     char resposta;
     int pontos = 0;
+
+    printf("Digite o seu nome, jogador(a): ");
+    fgets(jogadores[*totalJogadores].nome, TAM, stdin);
+
+    jogadores[*totalJogadores].nome[strcspn(jogadores[*totalJogadores].nome, "\n")] = '\0';
 
     if (totalPerguntas == 0) {
         printf("Nenhuma pergunta cadastrada!\n");

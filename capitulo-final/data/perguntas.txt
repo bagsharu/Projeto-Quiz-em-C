@@ -1,5 +1,3 @@
-Qual e o maior planeta do Sistema Solar?;Terra;Saturno;Jupiter;Marte;C
-Qual e a capital da Australia?;Sydney;Melbourne;Canberra;Perth;C
-Quem pintou a Mona Lisa?;Michelangelo;Leonardo da Vinci;Van Gogh;Picasso;B
-Qual elemento quimico possui simbolo O?;Ouro;Osmio;Oxigenio;Prata;C
-Em qual continente fica o Egito?;Asia;Europa;Africa;Oceania;C
+Qual o companheiro vampiro de Baldurs Gate 3?;Wyll;Gale;Halsin;Astarion;D
+Qual elemento da tabela periodica representado por H?;Hidrogenio;Oxigenio;Ouro;Prata;A
+Qual o melhor professor da Braz Cubas?;Alexandre;Bruno;Caio;Davi;D

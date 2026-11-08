@@ -10,6 +10,6 @@ void exibirMenu();
 int cadastrarPergunta(Pergunta perguntas[PERGUNTA], int indice);
 void listarPerguntas(Pergunta perguntas[PERGUNTA], int totalPerguntas);
 void exibirEstatisticas(int totalPerguntas, int totalAcertos, int totalRespostas);
-void jogar(Pergunta perguntas[PERGUNTA], int totalPerguntas, int *totalAcertos, int *totalRespostas);
+void jogar(Pergunta perguntas[PERGUNTA],Jogador jogadores[TAM], int totalPerguntas, int *totalAcertos, int *totalRespostas, int *totalJogadores);
 
 #endif
