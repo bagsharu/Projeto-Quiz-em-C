@@ -29,6 +29,7 @@ int main() {
         case 1:
 
             jogar(perguntas, jogadores, totalPerguntas, &totalAcertos, &totalRespostas, &totalJogadores);
+            salvarHistorico(jogadores, totalJogadores);
             break;
         
         case 2:

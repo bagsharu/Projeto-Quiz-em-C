@@ -127,5 +127,5 @@ void jogar(Pergunta perguntas[PERGUNTA], Jogador jogadores[TAM], int totalPergun
     printf("Acertos: %d de %d\n", jogadores[*totalJogadores].acertos, totalPerguntas);
     printf("Percentual: %.2f%%\n", jogadores[*totalJogadores].percentual);
 
-    *totalJogadores++;
+    (*totalJogadores)++;
 }

@@ -66,6 +66,11 @@ int carregarPerguntas(Pergunta perguntas[]){
 
 void salvarHistorico (Jogador jogadores[], int totalJogadores) {
 
+    if (totalJogadores <= 0) {
+
+        return;
+    }
+
     FILE *arquivo = fopen("data/historico.txt", "a");
 
     if (arquivo == NULL){
@@ -75,14 +80,13 @@ void salvarHistorico (Jogador jogadores[], int totalJogadores) {
         return;
     }
 
-    for (int i = 0; i < totalJogadores; i++) {
-    fprintf(arquivo, "%s;%d;%d;%.2f%%\n", jogadores[i].nome,
+    int i = totalJogadores - 1;
+    fprintf(arquivo, "%s;%d;%d;%.2f\n", jogadores[i].nome,
                                           jogadores[i].acertos,
                                           jogadores[i].totalPartidas,
                                           jogadores[i].percentual
         
     );
-}
 
     fclose(arquivo);
 }
