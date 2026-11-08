@@ -3,6 +3,9 @@
 #include <stdio.h>
 #include <string.h>
 
+#define PERGUNTA 5
+#define TAM 100
+
 void salvarPerguntas (Pergunta perguntas[], int totalPerguntas) {
 
     FILE *arquivo = fopen("data/perguntas.txt", "w");
@@ -26,4 +29,37 @@ void salvarPerguntas (Pergunta perguntas[], int totalPerguntas) {
 }
 
     fclose(arquivo);
+}
+
+int carregarPerguntas(Pergunta perguntas[]){
+
+    FILE * arquivo = fopen("data/perguntas.txt", "r");
+    int totalCadastrado = 0;
+    if (arquivo == NULL) {
+        printf("Arquivo de perguntas inválido.\n");
+        return 0;
+    }
+
+    while (totalCadastrado < PERGUNTA) {
+        int leitura = fscanf(arquivo,
+            " %99[^;];%99[^;];%99[^;];%99[^;];%99[^;]; %c%*[^\n]",
+            perguntas[totalCadastrado].enunciado,
+            perguntas[totalCadastrado].alternativas[0],
+            perguntas[totalCadastrado].alternativas[1],
+            perguntas[totalCadastrado].alternativas[2],
+            perguntas[totalCadastrado].alternativas[3],
+            &perguntas[totalCadastrado].respostaCorreta
+        );
+
+        if (leitura != 6) {
+            break;
+        }
+
+        totalCadastrado++;
+    }
+
+    fclose(arquivo);
+
+    return totalCadastrado;
+
 }

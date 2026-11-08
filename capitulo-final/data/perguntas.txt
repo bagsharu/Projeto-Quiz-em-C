@@ -1,1 +1,5 @@
-Qual capital do Brasil?;Amazonas;Brasilia;Ceara;Diadema;B
+Qual e o maior planeta do Sistema Solar?;Terra;Saturno;Jupiter;Marte;C
+Qual e a capital da Australia?;Sydney;Melbourne;Canberra;Perth;C
+Quem pintou a Mona Lisa?;Michelangelo;Leonardo da Vinci;Van Gogh;Picasso;B
+Qual elemento quimico possui simbolo O?;Ouro;Osmio;Oxigenio;Prata;C
+Em qual continente fica o Egito?;Asia;Europa;Africa;Oceania;C

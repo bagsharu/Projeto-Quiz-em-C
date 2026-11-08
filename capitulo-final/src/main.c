@@ -12,6 +12,8 @@ int main() {
 
     Pergunta perguntas[PERGUNTA];
 
+    totalPerguntas = carregarPerguntas(perguntas);
+
     while (menuNav != 0){
 
         exibirMenu();

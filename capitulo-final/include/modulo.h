@@ -20,6 +20,6 @@ typedef struct {
 
 
 void salvarPerguntas (Pergunta perguntas[PERGUNTA], int totalPerguntas);
-void carregarPerguntas (Pergunta perguntas[PERGUNTA]);
+int carregarPerguntas (Pergunta perguntas[PERGUNTA]);
 
 #endif
