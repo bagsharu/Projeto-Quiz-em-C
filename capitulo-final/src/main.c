@@ -36,6 +36,7 @@ int main() {
             if (totalPerguntas < PERGUNTA) {
                 if (cadastrarPergunta(perguntas, totalPerguntas) == 1) {
                     totalPerguntas++;
+                    salvarPerguntas (perguntas,totalPerguntas);
                     printf("Pergunta cadastrada com sucesso!\n");
                 }
             } else {
@@ -47,10 +48,6 @@ int main() {
             break;
         case 4:
             exibirEstatisticas(totalPerguntas, totalAcertos, totalRespostas);
-            break;
-
-        case 5:
-            salvarPerguntas (perguntas,totalPerguntas);
             break;
         case 0:
             printf("Saindo...\n");

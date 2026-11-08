@@ -9,8 +9,7 @@ void exibirMenu(){
         "1. Jogar\n"
         "2. Cadastrar pergunta\n"
         "3. Listar perguntas\n"
-        "4. Estatisticas\n"
-        "5. Salvar perguntas cadastradas\n"
+        "4. Ranking dos Jogadores\n"
         "0. Sair\n"
         "Digite uma opcao:\n");
 }

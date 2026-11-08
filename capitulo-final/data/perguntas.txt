@@ -1,5 +1,3 @@
-Qual o companheiro vampiro de Baldurs Gate 3?;Wyll;Gale;Halsin;Astarion;D
-Qual elemento da tabela periodica representado por H?;Hidrogenio;Oxigenio;Ouro;Prata;A
-Qual o melhor professor da Braz Cubas?;Alexandre;Bruno;Caio;Davi;D
-Qual capital do Brasil;Sao Paulo;Rio de Janeiro;Salvador;Brasilia;D
-Quanto e 5 + 3?;7;8;9;10;B
+Qual o maior oceano do planeta Terra?;Atlantico;Indico;Pacifico;Artico;C
+Qual planeta conhecido como o planeta vermelho?;Venus;Jupiter;Marte;Mercurio;C
+Quem escreveu Dom Casmurro?;Machado de Assis;Jose Alencar;Clarice Lispector;Carlos Drummond;A
